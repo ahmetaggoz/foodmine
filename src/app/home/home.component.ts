@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FoodService } from '../services/food/food.service';
+import { Food } from '../shared/models/Food';
 import { CommonModule} from '@angular/common';
 
 @Component({
@@ -10,7 +11,7 @@ import { CommonModule} from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  foods:String [] = [];
+  foods:Food[] = [];
 
   constructor(private foodService: FoodService){
     this.foods = foodService.getAll();

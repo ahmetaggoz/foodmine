@@ -1,5 +1,24 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+
 <ul>
   <li *ngFor="let food of foods">
-    <img src="{{ food }}" alt="" />
+    <a>
+      <img src="{{ food.imageUrl }}" alt="" />
+    </a>
+    <div class="content">
+      <div class="name">
+        {{ food.name }}
+      </div>
+      <span
+        class="favorite material-symbols-outlined {{
+          food.favorite ? '' : 'not'
+        }}"
+      >
+        favorite</span
+      >
+    </div>
   </li>
 </ul>
