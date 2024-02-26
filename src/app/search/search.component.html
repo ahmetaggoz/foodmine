@@ -1,0 +1,9 @@
+<div>
+  <input
+    type="text"
+    placeholder="Yemek Araması..."
+    [(ngModel)]="searchTerm"
+    (change)="search()"
+  />
+  <button (click)="search()">Arama</button>
+</div>

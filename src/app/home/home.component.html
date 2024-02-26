@@ -2,7 +2,7 @@
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
 />
-
+<app-search></app-search>
 <ul>
   <li *ngFor="let food of foods">
     <a>
@@ -19,6 +19,20 @@
       >
         favorite</span
       >
+      <div class="product-item-footer">
+        <div class="origins">
+          <span *ngFor="let origin of food.origins">
+            {{ origin }}
+          </span>
+        </div>
+        <div class="cook-time">
+          <span class="timer material-symbols-outlined">timer</span>
+          {{ food.cookTime }}
+        </div>
+      </div>
+      <div class="price">
+        <span> {{ food.price | currency }} </span>
+      </div>
     </div>
   </li>
 </ul>

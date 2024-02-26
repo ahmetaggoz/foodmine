@@ -1,4 +1,2 @@
-part 5 
-ng starrating 
-hata alıyoruz. 
-burada bıraktık.
+part 8 
+arama kutusu ekledik
